@@ -176,8 +176,9 @@ const Header = () => {
     });
   };
   return (
-    <header className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-gray-200 px-6 py-4">
-      <div className="flex items-center justify-between space-x-8">
+    <header className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-gray-200">
+      <div className="mx-auto max-w-7xl px-6 py-4">
+        <div className="flex items-center justify-between space-x-8">
         <div className="flex items-center space-x-4">
           <div 
             className="flex items-center space-x-4 cursor-pointer hover:opacity-80 transition-opacity"
@@ -373,6 +374,7 @@ const Header = () => {
           </DropdownMenu>
         </div>
       </div>
+    </div>
     </header>
   );
 };

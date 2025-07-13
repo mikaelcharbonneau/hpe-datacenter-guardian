@@ -20,23 +20,25 @@ const AppLayout: React.FC = () => {
     <div className="min-h-screen bg-white font-hpe flex flex-col">
       {/* Top header spanning full width */}
       <Header />
-      {/* Main content area */}
-      <div className="flex-1 overflow-auto pt-24 px-6 bg-gray-50">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/audits" element={<AuditList />} />
-          <Route path="/audits/start" element={<StartAudit />} />
-          <Route path="/audits/:id/issue" element={<AuditIssueEntry />} />
-          <Route path="/audits/:id/summary" element={<AuditSummary />} />
-          <Route path="/audits/:id/complete" element={<AuditComplete />} />
-          <Route path="/audits/:id" element={<AuditDetails />} />
-          <Route path="/incidents" element={<IncidentList />} />
-          <Route path="/incidents/:id" element={<IncidentDetails />} />
-          <Route path="/reports" element={<Reports />} />
-          <Route path="/reports/:id" element={<ReportDetails />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      {/* Main content area with proper centering */}
+      <div className="flex-1 overflow-auto pt-24 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 py-6">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/audits" element={<AuditList />} />
+            <Route path="/audits/start" element={<StartAudit />} />
+            <Route path="/audits/:id/issue" element={<AuditIssueEntry />} />
+            <Route path="/audits/:id/summary" element={<AuditSummary />} />
+            <Route path="/audits/:id/complete" element={<AuditComplete />} />
+            <Route path="/audits/:id" element={<AuditDetails />} />
+            <Route path="/incidents" element={<IncidentList />} />
+            <Route path="/incidents/:id" element={<IncidentDetails />} />
+            <Route path="/reports" element={<Reports />} />
+            <Route path="/reports/:id" element={<ReportDetails />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );

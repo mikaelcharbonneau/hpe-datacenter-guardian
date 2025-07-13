@@ -54,7 +54,7 @@ const AuditSummary = () => {
   const criticalIssues = hasIssues ? auditDetails.issues.filter(i => i.severity === 'Critical').length : 0;
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Audit Summary</h1>
         <p className="text-gray-600">Review your audit details before submission.</p>
