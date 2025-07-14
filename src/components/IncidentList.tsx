@@ -171,24 +171,20 @@ const IncidentList = () => {
       {/* Incident List */}
       <div className="grid gap-4">
         {filteredIncidents.map((incident) => (
-          <Card key={incident.id} accentColor={getSeverityVariant(incident.severity) === 'critical' ? 'border-hpe-red' : getSeverityVariant(incident.severity) === 'medium' ? 'border-hpe-orange' : getSeverityVariant(incident.severity) === 'low' ? 'border-hpe-yellow' : 'border-hpe-brand'} className="hover:shadow-md transition-shadow">
+          <Card key={incident.id} accentColor={getSeverityVariant(incident.severity) === 'critical' ? 'border-hpe-red' : getSeverityVariant(incident.severity) === 'medium' ? 'border-hpe-orange' : getSeverityVariant(incident.severity) === 'low' ? 'border-hpe-yellow' : 'border-hpe-brand'} className="hover:shadow-hpe-brand transition-shadow cursor-pointer">
             <CardContent className="p-6">
               <div className="flex items-start justify-between">
                 <div className="space-y-3 flex-1">
                   <div className="flex items-center space-x-3 flex-wrap gap-2">
                     <h3 className="font-semibold text-lg">{incident.id}</h3>
-                    <Badge variant={getSeverityVariant(incident.severity)}>
-                      {incident.severity}
-                    </Badge>
-                    <Badge variant={getStatusVariant(incident.status)}>
-                      {incident.status}
-                    </Badge>
-                    <Badge variant={getTypeVariant(incident.type)}>
-                      {incident.type}
-                    </Badge>
-                    <Badge variant="outline" className={getScopeColor(incident.scope)}>
-                      {incident.scope}
-                    </Badge>
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
                   </div>
                   <p className="text-gray-900 font-medium">{incident.description}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600">
